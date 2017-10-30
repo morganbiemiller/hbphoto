@@ -19,6 +19,7 @@
 
 .left-img {
   width: 58%;
+  height: 600px;
   position: absolute;
   bottom: 0; }
   .left-img img {
@@ -32,14 +33,13 @@
 .header {
   background-color: #ffffff;
   left: 0px;
-  height: 50px;
   position: fixed;
   text-align: center;
   top: 0;
-  right: 30px;
-  left: 30px;
+  right: 20px;
+  left: 20px;
   z-index: 100;
-  padding: 30px 20px; }
+  padding: 20px 0 0; }
 
 .header.transparent {
   background-color: transparent; }
@@ -54,6 +54,9 @@
   float: left; }
   .header .logo img {
     width: 100%; }
+  @media (max-width: 560px) {
+    .header .logo {
+      width: 80px; } }
 
 .header .logo:hover {
   opacity: 1; }
@@ -90,7 +93,7 @@
   float: right;
   height: 17px;
   margin-top: 6px;
-  opacity: 0.35;
+  opacity: 0.8;
   text-indent: 9999px;
   text-transform: uppercase;
   top: 50px;
@@ -111,6 +114,10 @@
 .header .menu:hover {
   opacity: 1; }
 
+@media (max-width: 540px) {
+  .offset {
+    padding: 62px 20px 20px; } }
+
 /* #.Navigation
 ================================================== */
 .navigation {
@@ -126,9 +133,15 @@
 .navigation .menu {
   display: block;
   left: 0px;
+  top: 0;
+  bottom: 0;
   position: absolute;
   right: 0px;
-  text-align: center; }
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0 !important; }
 
 .navigation .menu ul {
   margin-bottom: 0px !important;
@@ -215,7 +228,7 @@
   top: 0px; }
 
 .home .header {
-  margin-top: 30px; }
+  margin-top: 20px; }
 
 .home .header .menu {
   background-color: transparent;
@@ -381,9 +394,9 @@ section.about .link {
   margin-bottom: 10px;
   position: absolute;
   text-transform: uppercase; }
-
-#about h1 {
-  padding-top: 40px; }
+  @media (max-width: 600px) {
+    section.about .link {
+      position: relative; } }
 
 #about p {
   margin-right: 20px; }
@@ -408,6 +421,9 @@ section.about .link {
   position: fixed;
   text-align: left;
   width: 200px; }
+  @media (max-width: 767px) {
+    .work .navigate {
+      top: 58px; } }
 
 .work .navigate select {
   display: none; }
@@ -798,14 +814,14 @@ section.contact span {
 /* #Footer
 ================================================== */
 .footer {
-  bottom: 45px;
-  left: 50px;
+  bottom: 20px;
+  left: 30px;
   position: fixed;
   text-align: left;
   z-index: 1; }
 
 .footer .link {
-  color: #a3a3a3;
+  color: black;
   cursor: pointer;
   letter-spacing: 0.3em;
   text-transform: uppercase;

@@ -23,6 +23,7 @@
 
 	.left-img {
 		width: 58%;
+		height: 600px;
 	    position: absolute;
 	    bottom: 0;
 	    img {
@@ -40,14 +41,13 @@
 	.header {
 		background-color: $white;
 		left: 0px;
-		height: 50px;
 		position: fixed;
 		text-align: center;
 		top: 0;
-		right: 30px;
-		left: 30px;
+		right: 20px;
+		left: 20px;
 		z-index: 100;
-		padding: 30px 20px;
+		padding: 20px 0 0;
 	}
 
 	.header.transparent {
@@ -60,15 +60,17 @@
 
 
 	.header {
-
 		.logo {
 			width: 140px;
 			height: auto;
 			display: inline-block;
 			float: left;
-		  	img {
-		  		width: 100%;
-		  	}
+	  	img {
+	  		width: 100%;
+	  	}
+	  	@media(max-width: 560px) {
+	  		width: 80px;
+	  	}
 		}
 	}
 
@@ -81,8 +83,8 @@
 		cursor: pointer;
 		display: inline-block;
 		float: left;
-    	font-family: 'Alegreya Sans SC', sans-serif;
-    	font-size: 24px;
+  	font-family: 'Alegreya Sans SC', sans-serif;
+  	font-size: 24px;
 		line-height: 30px;
 		opacity: 1;
 		text-align: left;
@@ -109,7 +111,7 @@
 		float: right;
 		height: 17px;
 		margin-top: 6px;
-		opacity: 0.35;
+		opacity: 0.8;
 		text-indent: 9999px;
 		text-transform: uppercase;
 		top: 50px;
@@ -133,6 +135,12 @@
 		opacity: 1;
 	}
 
+	.offset {
+		@media(max-width: 540px) {
+			padding: 62px 20px 20px;
+		}
+	}
+
 
 /* #.Navigation
 ================================================== */
@@ -151,9 +159,15 @@
 	.navigation .menu {
 		display: block;
 		left: 0px;
+		top: 0;
+		bottom:0;
 		position: absolute;
 		right: 0px;
 		text-align: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 0!important;
 	}
 
 	.navigation .menu ul {
@@ -174,7 +188,6 @@
 	  	-webkit-user-select: none;
 	  	-ms-user-select: none;
 	}
-	
 
 	.navigation .menu li:last-child {
 		margin-bottom: 0px;
@@ -258,7 +271,7 @@
 	}
 	.home {
 		.header {
-			margin-top: 30px;
+			margin-top: 20px;
 		}
 	}
 	.home .header .menu {
@@ -458,10 +471,10 @@
 		margin-bottom: 10px;
 		position: absolute;
 		text-transform: uppercase;
-	}
 
-	#about h1 {
-		padding-top: 40px;
+		@media(max-width: 600px) {
+			position: relative;
+		}
 	}
 
 	#about p {
@@ -492,6 +505,10 @@
 		position: fixed;
 		text-align: left;
 		width: 200px;
+
+		@media(max-width: 767px) {
+			top: 58px;
+		}
 	}
 
 	.work .navigate select {
@@ -701,7 +718,7 @@
 		left: 0px;
 		padding-right: 35px;
 		-ms-transform: rotate(-90deg);
-    	-webkit-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
 		transform: rotate(-90deg);
 	}
 
@@ -727,10 +744,6 @@
 
 /* #Blog
 ================================================== */
-
-	.blog {
-
-	}
 
 	.blog .offset {
 		padding-bottom: 0px;
@@ -962,15 +975,15 @@
 ================================================== */
 
 	.footer {
-		bottom: 45px;
-		left: 50px;
+		bottom: 20px;
+		left: 30px;
 		position: fixed;
 		text-align: left;
 		z-index: 1;
 	}
 
 	.footer .link {
-		color: #a3a3a3;
+		color: black;
 		cursor: pointer;
 		letter-spacing: 0.3em;
 		text-transform: uppercase;

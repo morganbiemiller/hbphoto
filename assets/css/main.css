@@ -5,21 +5,9 @@
 }
 
 
-/* Table of Content
-==================================================
-	#Navigation
-	#Home
-	#About
-	#Work
-	#Blog
-	#Article
-	#Contact
-	#Footer
-	#Not Found */
-
-	.header, .home .title, .home .slogan, .page .content, .work .navigate, .work .stream, .blog .inner {
-		opacity: 0;
-	}
+.header, .home .title, .home .slogan, .page .content, .work .navigate, .work .stream, .blog .inner {
+	opacity: 0;
+}
 
 /* #.Header
 ================================================== */
@@ -67,7 +55,6 @@
 	  	-webkit-user-select: none;
 	  	-ms-user-select: none;
 	}
-
 
 
 	.header .logo:hover {
